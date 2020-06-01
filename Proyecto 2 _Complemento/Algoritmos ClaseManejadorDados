@@ -1,0 +1,11 @@
+Inicio hiloDado (etiqueta)
+
+  arreglo direcciones
+
+  llamar MetodosUtiles
+    llamar generaraNumeroAleatorios(5,0)
+    var n = generaraNumeroAleatorios(5,0)
+
+  etiqueta = llamar cambiarIcono(direcciones(n))
+
+fin correrDados

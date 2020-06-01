@@ -1,0 +1,74 @@
+Inicio agregarCasillas
+    redimensionarPanel(dimension*columnas, dimension*filas)
+
+    arreglo casillasUI(filas, columnas)
+
+    desde (var fila = 0 hasta fila < filas; fila++)
+      desde (var columna = 0 hasta columna < columnas; fila++)
+        casilla(fila, columna) = casillasUI(dimension*columna, dimension*fila)
+
+        casilla(fila, columna) = llamar agregarEvento
+        agregarAlpanel(casilla(fila, columna))
+      fin desde
+    fin desde
+
+    repintar panel
+
+fin agregarCasillas
+
+***************************
+Inicio modificarCasilla(eventoMouse e)
+
+  desde (var fila = 0 hasta fila < filas; fila++)
+    desde (var columna = 0 hasta columna < columnas; fila++)
+      si(e == casilla(fila, columna))
+        var tipoCasilla
+        Escribir("
+          1. inicio,
+          2. Nuetro,
+          3. Trampa
+          4. Propiedad,
+          5. Toma una Tarjeta,
+          6, Cárcel")
+
+          si(var = 1)
+              llamar cambiarNombreCasillaInicio
+          sino si(var = 2)
+
+              llamar cambiarNombreCasillaNeutro
+
+          sino si(var = 3)
+
+              llamar cambiarNombreCasillaTrampa
+          sino si(var = 4)
+
+              llamar cambiarNombreCasillaTomaTarjeta
+          sino si(var = 5)
+
+              llamar cambiarNombreCasillaPropiedad
+          sino si(var = 6)
+
+            llamar cambiarNombreCasillaCarcel
+          finsi
+
+        fin si
+  fin desde
+fin desde
+
+fin modificarCasilla
+
+*************************
+Inicio regresarCasilla(eventoMouse e)
+
+  desde (var fila = 0 hasta fila < filas; fila++)
+    desde (var columna = 0 hasta columna < columnas; fila++)
+      si(e == casilla(fila, columna))
+
+          llamar casillaNombreOriginal
+          llamar casillaColorOriginal
+
+      fin si
+    fin desde
+  fin desde
+
+fin reegresarCasilla

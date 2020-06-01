@@ -1,0 +1,11 @@
+Inicio agregarJugadores
+  desde(var i = 0 hasta i noJugadores, i++)
+    JugadorUI = nuevoJugadorUi
+
+    agregarAlpanel(jugadorUI llamar obtenerTextoNombre)
+    llamar establecerTamañoTextoNombre
+
+    jugadoresUI = jugadorUI
+
+  fin desde
+fin agregarJugadores

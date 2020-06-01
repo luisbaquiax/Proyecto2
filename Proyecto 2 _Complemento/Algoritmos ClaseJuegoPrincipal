@@ -1,0 +1,75 @@
+Inicio tirarDados
+  var n = cantidadDados
+
+  desde (var i = 0 hasta i < n, i++ )
+
+    iniciar hiloDado
+
+  fin desde
+
+fin tirarDados
+
+**************
+Inicio temporizador
+
+  si(iniciarTarea = verdader)
+
+    llamar iniciarTemporizador
+
+  fin si
+
+fin temporizador
+************
+Inicio iniciarTemporizador
+
+  var hora, minuto, segundo, iniciando, iniciarTarea
+
+  si(iniciando = verdadero)
+
+    si(segundo > 0)
+      segundo --
+        sino hacer
+          segundo = 59
+
+          si(minuto > 0)
+            minuto --
+              sino hacer
+                minuto = 59
+                si(hora > 0)
+                  hora --
+                    sino hacer
+                      iniciando = falso
+                      iniciarTarea = falso
+                finsi
+          finsi
+    finsi
+  finsi
+
+  si(iniciado = false)
+    llamar cambiarHorario
+  finsi
+
+fin iniciarTemporizador
+************
+
+Inicio cambiarHorario
+
+var, hora, minuto, segundo
+  si(segundo < 10)
+    segunto = 0 + segundo
+    sino hacer
+      segundo =+ segundo
+      fin sino
+  sino si(minuto < 10)
+      minuto = 0 + minuto
+        sino hacer
+          minuto =+ minuto
+        fin sino
+  sino si(hora < 10)
+      hora = 0 + hora
+        sino hacer
+          hora =+ hora
+        fin sino
+  finsi
+  var horaCompleta = hora + minuto + segundo
+fin cambiarHorario
